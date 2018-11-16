@@ -2,19 +2,11 @@ var express = require('express');
 var app = express();
 
 var https = require('https');
-var http = require('http').Server(mess);
 
 var url = require('url');
 var bodyParser = require('body-parser');
 var path = require('path');
 var nodemailer = require('nodemailer');
-
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'brownchickenbrowncow',
-  database: 'safewalktest'
-});
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 
@@ -37,15 +29,15 @@ app.post('/email', function(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'youremail@gmail.com',
-      pass: 'yourpassword'
+      user: 'aiclubatuva@gmail.com',
+      pass: 'brownchickenbrowncow'
     }
   });
 
   var mailOptions = {
-    to: 'myfriend@yahoo.com',
-    subject: 'Sending Email using Node.js',
-    text: 'That was easy!'
+    to: 'aiclubatuva@gmail.com',
+    subject: 'Message from '+name,
+    text: 'Message: '+mess+" contact at "+emailId+" or "+phone
   };
 
   transporter.sendMail(mailOptions, function(error, info) {
