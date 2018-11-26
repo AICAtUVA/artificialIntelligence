@@ -35,7 +35,7 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet" />
+    <link href="css/agency.css" rel="stylesheet" />
 
     <style>
       #summary {
@@ -97,13 +97,13 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onclick="activateSummit()">AI Summit</a>
+              <a class="nav-link js-scroll-trigger" onclick="activateSummit()" href="#page-top">AI Summit</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onclick="activateSponsor()">Sponsor Us</a>
+              <a class="nav-link js-scroll-trigger" onclick="activateSponsor()" href="#page-top">Sponsor Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onclick="activateContact()">Contact</a>
+              <a class="nav-link js-scroll-trigger" onclick="activateContact()" href="#page-top">Contact</a>
             </li>
           </ul>
         </div>
@@ -291,22 +291,81 @@
 
     <div id="sponsors" style="display: none">
       <!-- Clients -->
-      <header class="masthead">
+      <header class="masthead" style="background-image:url('img/topBar-bg.jpg'); height: 500px;">
         <div class="container">
           <div class="intro-text">
-            <div class="intro-heading text-uppercase">Artificial Intelligence Summit</div>
-            <div class="intro-lead-in">
-              The purpose of this summit is to yada yada or catchy slogan here... (use diffrent
-              background picture)
-            </div>
-            <a
-              class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-              onclick="activateSummit()"
-              >Register Here</a
-            >
+            <div class="intro-heading text-uppercase">Sponsor Us</div>
+              <a
+              class="btn btn-primary btn-x2 text-uppercase js-scroll-trigger"
+              data-toggle="collapse" data-target="#multiCollapseExample1" 
+              >Donate!</a>
           </div>
         </div>
       </header>
+        <div id="multiCollapseExample1" class ="collapse ">
+        <section class="bg-dark" id="contact" >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-subheading text-white">Fill out this form if you are interested in donating!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        id="name"
+                        type="text"
+                        placeholder="Organization Name *"
+                        required="required"
+                        data-validation-required-message="Please enter your name."
+                      />
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        id="email"
+                        type="email"
+                        placeholder="Email *"
+                        required="required"
+                        data-validation-required-message="Please enter your email address."
+                      />
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        id="contactName"
+                        type="text"
+                        placeholder="Contact Name (optional)"
+                        required="not"
+                      />
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button
+                      id="sendMessageButton"
+                      class="btn btn-primary btn-xl text-uppercase"
+                      type="submit"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
       <section class="py-5 bg-dark">
         <div class="container">
           <div class="row">
