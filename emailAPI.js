@@ -51,9 +51,10 @@ app.post('/email', function(req, res) {
 });
 
 app.post('/sponsor', function (req, res) {
-    var name = req.body.name;
-    var email = req.body.email;
-    var cName = req.body.cName;
+    console.log("what up what up what up");
+    var name = req.body.nameS;
+    var email = req.body.emailS;
+    var cName = req.body.cNameS;
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',

@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="intro-text">
                     <div style="text-shadow: 0px 0px 3px #011627;" class="intro-lead-in">The University of Virginia's First Annual</div>
-                    <div style="color: #011627; text-shadow: 0px 0px 3px #ffd136;" class="intro-heading text-uppercase">Artificial Intelligence Summit</div>
+                    <div style="color: #011627; text-shadow: 0px 0px 3px #d16014;" class="intro-heading text-uppercase">Artificial Intelligence Summit</div>
                     <div style="text-shadow: 0px 0px 3px #011627;" class="intro-lead-in">January 19th @ UVA Newcomb Ballroom</div>
                     <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
                        onclick="activateSummit()">Learn More!</a>
@@ -104,16 +104,16 @@
         </section>
     </div>
     <div id="summitTab" style="display:none">
-        <header class="masthead">
+        <header sstyle='background-image: url("../img/header-bg.jpg");'; class="masthead">
             <div class="container">
                 <div class="intro-text">
-                    <div class="intro-heading text-uppercase">Artificial Intelligence Summit</div>
-                    <div class="intro-lead-in">
-                        The purpose of this summit is to yada yada or catchy slogan here... (use diffrent
+                    <div style="color: #011627; text-shadow: 0px 0px 3px #d16014;" class="intro-heading text-uppercase">Artificial Intelligence Summit</div>
+                    <div style="text-shadow: 0px 0px 3px #011627;" class="intro-lead-in">
+                        The purpose of this summit is to yada yada or catchy slogan here... (use different
                         background picture)
                     </div>
                     <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-                       onclick="activateSummit()">Register Here</a>
+                       href="https://goo.gl/forms/jdBD5sbGJoha3Xm12" target="_blank">Register Here</a>
                 </div>
             </div>
         </header>
@@ -160,7 +160,7 @@
         </section>
     </div>
     <div id="contactTab" style="display:none">
-        <section class="bg-dark" id="contact">
+        <section style="color: #011627" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -249,21 +249,21 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="sponsorForm" name="sentMessage" novalidate="novalidate">
+                            <form id="sponsorForm" name="sentSponsor" novalidate="novalidate">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <input class="form-control"
-                                                   id="name"
+                                                   id="nameS"
                                                    type="text"
                                                    placeholder="Organization Name *"
                                                    required="required"
-                                                   data-validation-required-message="Please enter your name." />
+                                                   data-validation-required-message="Please enter your organization's name." />
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control"
-                                                   id="email"
+                                                   id="emailS"
                                                    type="email"
                                                    placeholder="Email *"
                                                    required="required"
@@ -272,20 +272,21 @@
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control"
-                                                   id="contactName"
+                                                   id="contactNameS"
                                                    type="text"
                                                    placeholder="Contact Name"
-                                                   required="required" />
+                                                   required="required"
+                                                   data-validation-required-message="Please enter a name." />
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
                                         <div id="success"></div>
-                                        <button id="sendMessageButton"
+                                        <button id="sendSponsorButton"
                                                 class="btn btn-primary btn-xl text-uppercase"
-                                                type="submit">
-                                            Send Message
+                                                type="submit" >
+                                            Submit
                                         </button>
                                     </div>
                                 </div>
