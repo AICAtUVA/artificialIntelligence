@@ -45,7 +45,36 @@ app.post('/email', function(req, res) {
       console.log(error);
     } else {
         console.log('Email sent: ' + info.response);
-        res.send({status: "success"});
+        res.send({status: success});
     }
   });
+});
+
+app.post('/sponsor', function (req, res) {
+    var name = req.body.name;
+    var email = req.body.email;
+    var cName = req.body.cName;
+
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'aiclubatuva@gmail.com',
+            pass: 'brownchickenbrowncow'
+        }
+    });
+
+    var mailOptions = {
+        to: 'aiclubatuva@gmail.com',
+        subject: 'Sponsor Alert! From ' + name,
+        text: 'Contact email: ' + email + ", Contact Name (optional): " + cName + ", Company: " + name
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.send({ status: "success" });
+        }
+    });
 });
