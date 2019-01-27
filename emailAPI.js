@@ -79,3 +79,7 @@ app.post('/sponsor', function (req, res) {
         }
     });
 });
+app.get('/', function(req, res) {
+  console.log("Hello World");
+  res.sendFile(path.resolve("./index.html"));
+});
